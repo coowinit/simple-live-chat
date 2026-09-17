@@ -1,46 +1,54 @@
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="stylesheet" href="chat-widget.css">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Simple Live Chat</title>
+  <link rel="stylesheet" href="css/chat-widget.css">
+</head>
+<body>
+  <div class="cw-chat">
+    <section class="cw-panel" id="cwPanel" hidden>
+      <header class="cw-header">
+        <div class="cw-avatar">CW</div>
+        <div class="cw-info">
+          <strong>COOWIN Support</strong>
+          <span><i></i>Online · Usually replies within a few minutes</span>
+        </div>
+        <button class="cw-close" id="cwClose" type="button" aria-label="Close chat">×</button>
+      </header>
 
-<div class="cw-chat">
-  <section class="cw-panel" id="cwPanel" hidden>
-    <header class="cw-header">
-      <div class="cw-avatar">CW</div>
-      <div class="cw-info">
-        <strong>COOWIN Support</strong>
-        <span><i></i>Online · Usually replies within a few minutes</span>
+      <div class="cw-messages" id="cwMessages">
+        <div class="cw-message">
+          <p>Hello! Welcome to COOWIN. How can we help you today?</p>
+          <small>COOWIN Support</small>
+        </div>
+
+        <div class="cw-quick" id="cwQuick">
+          <button type="button">Decking</button>
+          <button type="button">Wall Cladding</button>
+          <button type="button">Fence</button>
+          <button type="button">Get a Quote</button>
+          <button type="button">Sample Request</button>
+        </div>
       </div>
-      <button class="cw-close" id="cwClose" type="button" aria-label="Close chat">×</button>
-    </header>
 
-    <div class="cw-messages" id="cwMessages">
-      <div class="cw-message">
-        <p>Hello! Welcome to COOWIN. How can we help you today?</p>
-        <small>COOWIN Support</small>
-      </div>
+      <form class="cw-form" id="cwForm">
+        <input id="cwInput" type="text" placeholder="Type your message..." autocomplete="off">
+        <button type="submit" aria-label="Send message">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 9.7 14.3M21 3l-7.2 18-4.1-6.7L3 10.2 21 3Z"/></svg>
+        </button>
+      </form>
+    </section>
 
-      <div class="cw-quick" id="cwQuick">
-        <button type="button">Decking</button>
-        <button type="button">Wall Cladding</button>
-        <button type="button">Fence</button>
-        <button type="button">Get a Quote</button>
-        <button type="button">Sample Request</button>
-      </div>
-    </div>
+    <button class="cw-launcher" id="cwLauncher" type="button" aria-label="Open chat" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.5 18.5 4 20l1.2-3.8A7.7 7.7 0 0 1 4 12.1C4 7.6 7.6 4 12 4s8 3.6 8 8-3.6 8-8 8c-1.6 0-3.2-.5-4.5-1.5Z"/>
+        <path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/>
+      </svg>
+    </button>
+  </div>
 
-    <form class="cw-form" id="cwForm">
-      <input id="cwInput" type="text" placeholder="Type your message..." autocomplete="off">
-      <button type="submit" aria-label="Send message">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 9.7 14.3M21 3l-7.2 18-4.1-6.7L3 10.2 21 3Z"/></svg>
-      </button>
-    </form>
-  </section>
-
-  <button class="cw-launcher" id="cwLauncher" type="button" aria-label="Open chat" aria-expanded="false">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M7.5 18.5 4 20l1.2-3.8A7.7 7.7 0 0 1 4 12.1C4 7.6 7.6 4 12 4s8 3.6 8 8-3.6 8-8 8c-1.6 0-3.2-.5-4.5-1.5Z"/>
-      <path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/>
-    </svg>
-  </button>
-</div>
-
-<script src="chat-widget.js"></script>
+  <script src="js/chat-widget.js"></script>
+</body>
+</html>
